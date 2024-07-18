@@ -1,0 +1,60 @@
+
+# Wofi configuration file
+
+# Set the width and height of the window
+width=50%
+height=50%
+
+# Set the position of the window (center by default)
+# x=100
+# y=100
+
+# Set the number of lines to display
+lines=10
+
+# Set the font and font size
+font=JetBrains Mono 12
+
+# Set the prompt text
+prompt=Search...
+
+# Set the color scheme
+# Colors can be specified in RGB or hex format
+color_window_background=2e3440
+color_normal_background=2e3440
+color_normal_foreground=d8dee9
+color_selected_background=4c566a
+color_selected_foreground=eceff4
+
+# Set the mode (run, drun, window)
+mode=drun
+
+# Enable fuzzy matching
+fuzzy=true
+
+# Show icons
+show_icons=true
+
+# Set the icon theme
+icon_theme=Papirus
+
+# Sort the results
+sort_order=alphabetical
+
+# Set the terminal command (for terminal apps)
+term=kitty
+
+# Set the number of columns
+columns=1
+
+# Allow images
+allow_images=true
+
+# Set the image size
+image_size=24
+
+# Set the search placeholder text
+filter_rate=100
+
+# Hide the mouse cursor
+hide_cursor=true

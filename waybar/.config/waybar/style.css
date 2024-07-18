@@ -1,0 +1,93 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-weight: 500;
+    font-size: 14px;
+
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+
+window#waybar { 
+    background-color: rgba(31, 31, 31, 1.0);
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#window,
+#workspaces {
+    /*margin-top: 6px;*/
+    padding: 0 6px;
+}
+
+#workspaces {
+    padding: 0 2px;
+	background: rgba(31, 31, 31, 1.0);
+	transition: none;
+}
+
+#workspaces button {
+    border: none;
+    padding: 0 3px;
+    margin: 0 1px;
+    background: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#workspaces button.empty {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+#workspaces button.active {
+    background: #f0f7ff;
+    color: #1f1f1f;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock {
+    background-color: #eefff1;
+    color: #000000;
+}
+
+#pulseaudio {
+    background-color: #b0f5e5;
+    color: #000000;
+}
+
+#language {
+    background-color: #b0f5a3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tray {
+    background-color: rgba(16, 20, 24, 0.5);
+}
+
+#window {
+    font-family: 'JetBrains Mono', 'Noto Sans CJK SC', sans-serif;
+    font-weight: 400;
+    background-color: #cbecff;
+    color: #000000;
+}
