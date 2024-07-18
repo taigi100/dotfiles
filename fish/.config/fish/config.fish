@@ -3,6 +3,7 @@ set -x EDITOR "nvim"
 set -x VISUAL "nvim"
 set -x PATH ~/Projects $PATH 
 set -x NVIM_APPNAME "nvim-web"
+set -x HYPRSHOT_DIR ~/Screenshots
 
 function tt
   taskwarrior-tui

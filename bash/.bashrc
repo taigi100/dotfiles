@@ -1,6 +1,7 @@
 TZ=EUROPE/Bucharest
 EDITOR=nvim
 VISUAL=nvim
+HYPRSHOT_DIR=~/Screenshots/
 PATH=$PATH:/~/Projects
 
 alias tt = “taskwarrior-tui”
