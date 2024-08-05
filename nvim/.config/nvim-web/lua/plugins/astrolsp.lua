@@ -43,6 +43,29 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      vtsls = {
+        settings = {
+          typescript = {
+            tsserver = {
+              experimental = {
+                enableProjectDiagnostics = true,
+              },
+            },
+            suggest = {
+              completeFunctionCalls = true,
+              paths = true,
+            },
+            preferences = {
+              importModuleSpecifier = "relative",
+            },
+            inlayHints = {
+              functionLikeReturnTypes = {
+                enabled = true,
+              },
+            },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {

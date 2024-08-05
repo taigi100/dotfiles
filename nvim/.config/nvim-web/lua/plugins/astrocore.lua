@@ -54,11 +54,9 @@ return {
 
         ["gh"] = { "^", desc = "Go to start of line" },
         ["gl"] = { "$", desc = "Go to end of line" },
-        ["gb"] = { "<C-o>", desc = "Go back" },
-        ["gf"] = { "<C-i>", desc = "Go forward" },
-        -- gl was hover  diagnostics, switch that
+        ["<tab>"] = { function() require("astrocore.buffer").prev() end, desc = "Go back" },
 
-        ["<Leader>a"] = { "<cmd>%y+<CR>", desc = "Select all" },
+        ["<Leader>a"] = { function() vim.cmd "1,$y+" end, desc = "Select all", noremap = true },
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
