@@ -1,4 +1,4 @@
-TZ=EUROPE/Bucharest
+TZ=Europe/Bucharest
 EDITOR=nvim
 VISUAL=nvim
 HYPRSHOT_DIR=~/Screenshots/

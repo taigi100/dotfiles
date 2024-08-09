@@ -103,12 +103,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export TZ=EUROPE/Bucharest
+export TZ=Europe/Bucharest
 export EDITOR=nvim
 export VISUAL=nvim
 export HYPRSHOT_DIR=~/Screenshots/
 export PATH=$PATH:/~/Projects
 export NVIM_APPNAME=nvim-web
+export AWS_PROFILE=nestegg-dev
 
 
 alias tt=“taskwarrior-tui”

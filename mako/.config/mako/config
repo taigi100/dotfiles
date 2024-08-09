@@ -1,34 +1,56 @@
-# General
-font=JetBrains Mono Nerd Font 10
-width=300
-height=100
+# Global settings
+max-history=20
+sort=-time
+
+# Style
+font=SFProDisplay Nerd Font 14
+width=400
+height=400
 margin=10
-padding=15
-border-size=2
-border-radius=10
+padding=10
+border-size=3
+border-radius=15
+progress-color=over #A594FD
+
+# Colors
+background-color=#121212
+text-color=#EAF0F5
+border-color=#0B0B0B
+
+# Low urgency
+[urgency=low]
+background-color=#121212
+text-color=#EAF0F5
+border-color=#0B0B0B
+
+# Normal urgency
+[urgency=normal]
+background-color=#121212
+text-color=#EAF0F5
+border-color=#0B0B0B
+
+# Critical urgency
+[urgency=critical]
+background-color=#f38ba8
+text-color=#1e1e2e
+border-color=#f38ba8
+
+# Positioning and behavior
+anchor=top-center
 default-timeout=5000
 ignore-timeout=1
 
-# Colors
-background-color=#1a1b26
-text-color=#a9b1d6
-border-color=#7aa2f7
-progress-color=over #7dcfff
-
-# Urgency-specific settings
-[urgency=low]
-border-color=#9ece6a
-
-[urgency=normal]
-border-color=#7aa2f7
-
-[urgency=high]
-border-color=#f7768e
-default-timeout=0
-
 # Icons
-icon-path=/usr/share/icons/Papirus-Dark
+icon-path=/usr/share/icons/Moka
 max-icon-size=64
 
-# Styling
-format=<b>%s</b>\n%b
+# Actions
+on-button-left=dismiss
+on-button-middle=dismiss-all
+on-button-right=dismiss
+
+# Misc
+markup=1
+actions=1
+group-by=app-name
+

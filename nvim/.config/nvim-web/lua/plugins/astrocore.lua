@@ -45,6 +45,9 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       -- first key is the mode
+      v = {
+        ["p"] = { '"_dP', desc = "Paste without yank" },
+      },
       n = {
         -- second key is the lefthand side of the map
 
@@ -52,11 +55,10 @@ return {
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
-        ["gh"] = { "^", desc = "Go to start of line" },
-        ["gl"] = { "$", desc = "Go to end of line" },
         ["<tab>"] = { function() require("astrocore.buffer").prev() end, desc = "Go back" },
 
-        ["<Leader>a"] = { function() vim.cmd "1,$y+" end, desc = "Select all", noremap = true },
+        ["<Leader>a"] = { function() vim.cmd "normal! ggVG" end, desc = "Select all", noremap = true },
+        ["d"] = { '"_d', desc = "Paste without yank" },
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()

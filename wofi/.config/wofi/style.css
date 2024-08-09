@@ -1,36 +1,51 @@
-
-window {
-    border: 2px solid #4c566a;
-    border-radius: 5px;
+* {
+  font-family: "${config.var.theme.font}";
+  font-weight: 500;
+  font-size: 14px;
 }
 
-#input {
-    margin: 5px;
-    border-radius: 3px;
-    border: 1px solid #4c566a;
-    background-color: #3b4252;
-    color: #d8dee9;
-}
-
-#inner-box {
-    margin: 5px;
-    background-color: #2e3440;
+#window {
+  background-color: #121212;
+  color: #eaf0f5;
+  border-radius: 15px;
 }
 
 #outer-box {
-    margin: 5px;
-    background-color: #2e3440;
+  padding: 20px;
+}
+
+#input {
+  background-color: #0b0b0b;
+  border: 0px solid #a594fd;
+  padding: 8px 12px;
 }
 
 #scroll {
-    margin: 5px;
+  margin-top: 20px;
+}
+
+#img {
+  padding-right: 8px;
 }
 
 #text {
-    margin: 5px;
-    color: #d8dee9;
+  color: #cdd6f4;
+}
+
+#text:selected {
+  color: #eaf0f5;
+}
+
+#entry {
+  padding: 6px;
 }
 
 #entry:selected {
-    background-color: #4c566a;
+  background-color: #a594fd;
+  color: #0b0b0b;
+}
+
+#input,
+#entry:selected {
+  border-radius: 15px;
 }

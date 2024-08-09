@@ -1,33 +1,29 @@
-
+allow_markup=true
+width=450
+show=drun
+prompt=Apps
+normal_window=true
+layer=top
+term=foot
+height=305px
+orientation=vertical
+halign=fill
+line_wrap=off
+dynamic_lines=false
+allow_images=true
+image_size=24
+exec_search=false
+hide_search=false
+parse_search=false
+insensitive=true
+hide_scroll=true
+no_actions=true
+sort_order=default
+gtk_dark=true
+filter_rate=100
+key_expand=Tab
+key_exit=Escape
 # Wofi configuration file
-
-# Set the width and height of the window
-width=50%
-height=50%
-
-# Set the position of the window (center by default)
-# x=100
-# y=100
-
-# Set the number of lines to display
-lines=10
-
-# Set the font and font size
-font=JetBrains Mono 12
-
-# Set the prompt text
-prompt=Search...
-
-# Set the color scheme
-# Colors can be specified in RGB or hex format
-color_window_background=2e3440
-color_normal_background=2e3440
-color_normal_foreground=d8dee9
-color_selected_background=4c566a
-color_selected_foreground=eceff4
-
-# Set the mode (run, drun, window)
-mode=drun
 
 # Enable fuzzy matching
 fuzzy=true
@@ -36,25 +32,13 @@ fuzzy=true
 show_icons=true
 
 # Set the icon theme
-icon_theme=Papirus
-
-# Sort the results
-sort_order=alphabetical
+icon_theme=Mako
 
 # Set the terminal command (for terminal apps)
 term=kitty
-
-# Set the number of columns
-columns=1
 
 # Allow images
 allow_images=true
 
 # Set the image size
 image_size=24
-
-# Set the search placeholder text
-filter_rate=100
-
-# Hide the mouse cursor
-hide_cursor=true
