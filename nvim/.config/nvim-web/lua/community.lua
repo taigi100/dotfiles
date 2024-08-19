@@ -6,9 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
-  { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
-  { import = "astrocommunity.terminal-integration.vim-tpipeline" },
   { import = "astrocommunity.search.nvim-hlslens" },
   { import = "astrocommunity.syntax.vim-cool" },
   { import = "astrocommunity.pack.angular" },

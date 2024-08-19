@@ -59,6 +59,7 @@ return {
 
         ["<Leader>a"] = { function() vim.cmd "normal! ggVG" end, desc = "Select all", noremap = true },
         ["d"] = { '"_d', desc = "Paste without yank" },
+        ["x"] = { '"_x', desc = "Delete char without yank" },
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
