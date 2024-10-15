@@ -6,14 +6,18 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.search.nvim-hlslens" },
-  { import = "astrocommunity.syntax.vim-cool" },
   { import = "astrocommunity.pack.angular" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.hyprlang" },
-  { import = "astrocommunity.pack.full-dadbod" },
+  { import = "astrocommunity.pack.full-dadbod" }, -- DB ui and stuff
+  { import = "astrocommunity.pack.markdown" },
+  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+  { import = "astrocommunity.note-taking.global-note-nvim" },
   { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.search.nvim-hlslens" },
+  { import = "astrocommunity.syntax.vim-cool" },
 
   -- import/override with your plugins folder
 }

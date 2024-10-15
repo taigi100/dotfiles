@@ -136,7 +136,11 @@ end
 local config = {
 	color_scheme = "Tokyo Night Storm",
 	enable_tab_bar = false,
-
+	font = wezterm.font("Monaspace Neon Light"),
+	window_close_confirmation = "NeverPrompt",
+	animation_fps = 60,
+	max_fps = 120,
+	scrollback_lines = 5000,
 	keys = {
 		{
 			key = "O",
