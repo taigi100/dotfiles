@@ -41,6 +41,12 @@ return {
         -- This can be found in the `lua/lazy_setup.lua` file
       },
     },
+    sessions = {
+      autosave = {
+        last = true,
+        cwd = true,
+      },
+    },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {

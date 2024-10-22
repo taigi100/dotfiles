@@ -1,6 +1,42 @@
 local wezterm = require("wezterm")
+local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 local mux = wezterm.mux
 local act = wezterm.action
+
+tabline.setup({
+	options = {
+		icons_enabled = true,
+		theme = "Tokyo Night Storm",
+		section_separators = {
+			left = wezterm.nerdfonts.pl_left_hard_divider,
+			right = wezterm.nerdfonts.pl_right_hard_divider,
+		},
+		component_separators = {
+			left = wezterm.nerdfonts.pl_left_soft_divider,
+			right = wezterm.nerdfonts.pl_right_soft_divider,
+		},
+		tab_separators = {
+			left = wezterm.nerdfonts.pl_left_hard_divider,
+			right = wezterm.nerdfonts.pl_right_hard_divider,
+		},
+	},
+	sections = {
+		tabline_a = { "mode" },
+		tabline_b = { "workspace" },
+		tabline_c = { " " },
+		tab_active = {
+			"index",
+			{ "parent", padding = 0 },
+			"/",
+			{ "cwd",    padding = { left = 0, right = 1 } },
+			{ "zoomed", padding = 0 },
+		},
+		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 } } },
+		tabline_x = { "ram", "cpu" },
+		tabline_y = { "datetime", "battery" },
+		tabline_z = { "hostname" },
+	},
+})
 
 local function list_files(directory)
 	local files = {}
@@ -135,12 +171,38 @@ end
 
 local config = {
 	color_scheme = "Tokyo Night Storm",
-	enable_tab_bar = false,
 	font = wezterm.font("Monaspace Neon Light"),
 	window_close_confirmation = "NeverPrompt",
 	animation_fps = 60,
 	max_fps = 120,
 	scrollback_lines = 5000,
+	tab_bar_at_bottom = true,
+	-- Add custom tab bar style
+	colors = {
+		tab_bar = {
+			background = "#1a1b26",
+			active_tab = {
+				bg_color = "#7aa2f7",
+				fg_color = "#1a1b26",
+			},
+			inactive_tab = {
+				bg_color = "#24283b",
+				fg_color = "#545c7e",
+			},
+		},
+	},
+
+	-- Custom tab bar with time and current directory
+	tab_bar_style = {
+		new_tab = wezterm.format({
+			{ Foreground = { Color = "#7aa2f7" } },
+			{ Text = "+" },
+		}),
+		new_tab_hover = wezterm.format({
+			{ Foreground = { Color = "#bb9af7" } },
+			{ Text = "+" },
+		}),
+	},
 	keys = {
 		{
 			key = "O",
@@ -161,6 +223,18 @@ local config = {
 			mods = "CTRL|SHIFT",
 			action = act.ShowLauncherArgs({ flags = "WORKSPACES" }),
 		},
+		-- Split vertically
+		{ key = "\\", mods = "CTRL|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		-- Split horizontally
+		{ key = "|",  mods = "CTRL|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		-- Navigate splits
+		{ key = "h",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Left") },
+		{ key = "j",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Down") },
+		{ key = "k",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Up") },
+		{ key = "l",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Right") },
+		{ key = "x",  mods = "CTRL|SHIFT", action = act.CloseCurrentPane({ confirm = false }) },
 	},
 }
+
+tabline.apply_to_config(config)
 return config
