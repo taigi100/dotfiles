@@ -133,3 +133,8 @@ compinit
 # Created by `pipx` on 2024-07-23 18:29:39
 export PATH="$PATH:/home/taigi100/.local/bin"
 eval "$(zoxide init zsh)"
+
+# ~/.zshrc
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)

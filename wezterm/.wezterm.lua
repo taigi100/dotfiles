@@ -177,6 +177,7 @@ local config = {
 	max_fps = 120,
 	scrollback_lines = 5000,
 	tab_bar_at_bottom = true,
+	-- enable_wayland = false,
 	-- Add custom tab bar style
 	colors = {
 		tab_bar = {
