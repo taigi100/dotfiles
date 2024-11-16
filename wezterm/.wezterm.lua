@@ -28,7 +28,7 @@ tabline.setup({
 			"index",
 			{ "parent", padding = 0 },
 			"/",
-			{ "cwd", padding = { left = 0, right = 1 } },
+			{ "cwd",    padding = { left = 0, right = 1 } },
 			{ "zoomed", padding = 0 },
 		},
 		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 } } },
@@ -177,7 +177,7 @@ local config = {
 	max_fps = 120,
 	scrollback_lines = 5000,
 	tab_bar_at_bottom = true,
-	-- enable_wayland = false,
+	enable_wayland = false,
 	-- Add custom tab bar style
 	colors = {
 		tab_bar = {
@@ -227,13 +227,13 @@ local config = {
 		-- Split vertically
 		{ key = "\\", mods = "CTRL|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 		-- Split horizontally
-		{ key = "|", mods = "CTRL|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ key = "|",  mods = "CTRL|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 		-- Navigate splits
-		{ key = "h", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Left") },
-		{ key = "j", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Down") },
-		{ key = "k", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Up") },
-		{ key = "l", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Right") },
-		{ key = "x", mods = "CTRL|SHIFT", action = act.CloseCurrentPane({ confirm = false }) },
+		{ key = "h",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Left") },
+		{ key = "j",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Down") },
+		{ key = "k",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Up") },
+		{ key = "l",  mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Right") },
+		{ key = "x",  mods = "CTRL|SHIFT", action = act.CloseCurrentPane({ confirm = false }) },
 	},
 }
 
