@@ -110,7 +110,7 @@ export HYPRSHOT_DIR=~/Screenshots/
 export PATH=$PATH:/~/Projects
 export NVIM_APPNAME=nvim-web
 export AWS_PROFILE=nestegg-dev
-
+[ -f "$HOME/.zshrc.secrets" ] && source "$HOME/.zshrc.secrets"
 
 alias tt=“taskwarrior-tui”
 source /usr/share/nvm/init-nvm.sh
