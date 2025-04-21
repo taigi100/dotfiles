@@ -108,7 +108,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export HYPRSHOT_DIR=~/Screenshots/
 export PATH=$PATH:/~/Projects
-export NVIM_APPNAME=nvim-web
+export NVIM_APPNAME=nvim-v5
 export AWS_PROFILE=nestegg-dev
 [ -f "$HOME/.zshrc.secrets" ] && source "$HOME/.zshrc.secrets"
 
